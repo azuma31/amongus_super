@@ -5,16 +5,15 @@
 </head>
 <body>
     <script>
-    var password = prompt("パスワードを入力してください");
+        var password = prompt("パスワードを入力してください");
 
-    if (password === "アモアスチート") {
-        document.write("");
-        // ここに保護されたコンテンツを表示するコードを追加できます
-    } else {
-        alert("パスワードが違います");
-        window.location = "1.html"; // 1.html にリダイレクト
-    }
-</script>
-
+        if (password === "アモアスチート") {
+            // パスワードが正しい場合、1.htmlにリダイレクト
+            window.location.href = "1.html";
+        } else {
+            alert("パスワードが違います");
+            // パスワードが違う場合は何も表示しない
+        }
+    </script>
 </body>
 </html>
