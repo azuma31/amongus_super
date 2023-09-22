@@ -5,26 +5,16 @@
 </head>
 <body>
     <script>
-        var password = prompt("パスワードを入力してください");
+    var password = prompt("パスワードを入力してください");
 
-        if (password === "アモアスチート") {
-            loadProtectedContent();
-        } else {
-            alert("パスワードが違います");
-            // パスワードが違う場合は何も表示しない
-        }
+    if (password === "アモアスチート") {
+        document.write("");
+        // ここに保護されたコンテンツを表示するコードを追加できます
+    } else {
+        alert("パスワードが違います");
+        window.location = "1.html"; // 1.html にリダイレクト
+    }
+</script>
 
-        function loadProtectedContent() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "1.html", true); // 保護されたコンテンツのURLを指定
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    // 保護されたコンテンツを表示
-                    document.body.innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send();
-        }
-    </script>
 </body>
 </html>
